@@ -28,10 +28,10 @@ public class CustomerServiceTest {
 	
 	
 	@TestConfiguration
-    static class EmployeeServiceImplTestContextConfiguration {
+    static class CustomerServiceImplTestContextConfiguration {
  
         @Bean
-        public CustomerService employeeService() {
+        public CustomerService customerService() {
             return new CustomerServiceImpl();
         }
     }
