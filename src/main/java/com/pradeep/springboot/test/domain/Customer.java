@@ -7,11 +7,14 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import org.hibernate.annotations.GenericGenerator;
+
 @Entity
 public class Customer {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	
+	@Id @GeneratedValue(generator="system-uuid")
+	@GenericGenerator(name="system-uuid", strategy = "uuid")
 	private String id;
 	private String firstName;
 	private String lastName;

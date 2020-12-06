@@ -10,10 +10,10 @@ import com.pradeep.springboot.test.repo.CustomerRepo;
 
 
 @Service
-public class CusomerServiceImpl implements CustomerService {
+public class CustomerServiceImpl implements CustomerService {
 	
 	@Autowired
-	private CustomerRepo customerRepo;
+	CustomerRepo customerRepo;
 
 	@Override
 	public Customer getCustomer(String custId) {
